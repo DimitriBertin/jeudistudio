@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background-color: #FFF;
+} 
+
+html {
+  scroll-behavior: smooth;
+} 
+
+body {
+  line-height: 1.5;
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  @apply h-lvh relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app{
+  @apply grid md:grid-cols-2 gap-12 mx-auto w-9/12 relative z-10;
+}
+
+.app-title {
+  @apply col-span-1 flex flex-col items-start gap-2;
+}
+
+.app-logo {
+  @apply font-[--font-baskerville] text-6xl;
+}
+
+.app-slogan {
+  @apply text-xl font-light;
+}
+
+.app-content{
+  @apply col-span-1 text-sm leading-7;
+}
+
+.canvas {
+  @apply absolute inset-0;
+  opacity: 0.5;
+}
